@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gay Nigga</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 100vh;
+          flex-direction: column;
+          background: linear-gradient(to right, #FFA500,#FF6347);
+        }
+        
+        .headin {
+          font-size: x-large;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-weight: bolder;
+        }
+        .no {
+          height: 50px;
+          width: 50px;
+          left: 650px;
+          bottom: 0;
+          position: absolute;
+                transition: .5s;
+        }
+        .yes {
+          height: 50px;
+          width: 50px;
+        }
+        div {
+          margin: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div class="headin">Are you gay?</div>
+    <button class="yes">YES</button>
+    <button class="no">No</button>
+    <script>
+      function preventRightClick(event) {
+        event.preventDefault();
+      }
+      document.addEventListener('contextmenu', preventRightClick);
+  
+      let btnyes = document.getElementsByClassName("yes")[0];
+      let btnno = document.getElementsByClassName("no")[0];
+      
+      btnyes.addEventListener("click", show);
+      
+      function show() {
+        window.location.href = "soumiIntro.html"
+          alert("mujhe pta he tha bkld XDXD");
+      }
+      
+      btnno.addEventListener("mouseover", changepos);
+      
+      function changepos() {
+          let x = Math.floor(Math.random() * (window.innerWidth - 50));
+          let y = Math.floor(Math.random() * (window.innerHeight - 50));
+          
+          btnno.style.left = `${x}px`;
+          btnno.style.top = `${y}px`;
+      }
+      
+      function genpos() {
+          changepos();
+      }
+    </script>
+</body>
+</html>

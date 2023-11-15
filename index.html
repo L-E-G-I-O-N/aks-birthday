@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lil Nigga</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="overflow-hidden">
+    <div class="flex">
+
+        <div id="dialogue1" class="w-full h-[200px] border border-solid hidden absolute bottom-0 bg-black text-white  ">
+            <div class="h-[25px] w-full bg-red-600 text-black text-xl font-bold">
+                ATPACK
+            </div>
+            <div id="text1" class="">
+                <p>What? You thought it was you Birthday or something?</p>
+                <p>Well it is but this is not your gift. This is your ultimate nightmare</p>
+            </div>
+            <div id="text2" class="hidden">
+                <p>Ready for your challenge?</p>
+            </div>
+            <button id="next1" class="w-16 border border-black rounded-md h-auto absolute bottom-5 left-5 bg-red-700 font-bold justify-items-center hover:bg-red-900">
+                Next
+            </button>
+            <button id="next2" class="w-16 hidden border border-black rounded-md h-auto absolute bottom-5 left-5 bg-red-700 font-bold justify-items-center hover:bg-red-900">
+                Next
+            </button>
+        </div>
+        <div id="av" class="absolute bottom-6 right-16 transform translate-x-full transition duration-2000 ease-in-out delay-2000 animate-slide-in ">
+            <img src="assets/AV.png" alt="" width="400" height="400">
+        </div>
+    </div>
+
+        <div id="chal1" class="hidden">
+            <div>
+                <h2 class="text text-2xl">Can you tell me what is this?</h2>
+                <img src="assets/pic_2.png" alt="">
+            </div>
+            <div>
+                <p class="text text-xl">Go on take some hint lil nigga:</p>
+                <img src="assets/pic 1.png" alt="">
+            </div>
+            <div class="pt-3  w-72">
+                <input type="text" placeholder="answer?" class="border border-black" id="answer">
+                <button class="w-16 border border-black rounded-md h-auto  bg-red-700 font-bold justify-items-center hover:bg-red-900" id="enter">Enter</button>
+            </div>
+        </div>
+    
+        
+        <script src="script.js"></script>
+</body>
+</html>

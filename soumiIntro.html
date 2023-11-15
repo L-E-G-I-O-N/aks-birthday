@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="overflow-hidden">
+    <div class="flex">
+
+        <div id="dialogue1" class="w-full h-[200px] border border-solid hidden absolute bottom-0 bg-black text-white  ">
+            <div class="h-[25px] w-full bg-red-600 text-black text-xl font-bold">
+                SOUMI
+            </div>
+            <div id="text1" class="">
+                <p>So Mister, Enough with your brain teasers now😇</p>
+                <p>Now will you pay some attention to your love life and your girlfriend?🥺</p>
+            </div>
+            <div id="text2" class="hidden">
+                <p>Here you will find questions about your relationship and me.</p>
+                <p>If you make even one mistake, you will have to do whatever bhaiya tells you and I will give you punishment along with it.😇</p>
+                <p>PS: if you make a single mistake I wont do any dare in december</p>
+            </div>
+            <button id="next1" class="w-16 border border-black rounded-md h-auto absolute bottom-5 left-5 bg-red-700 font-bold justify-items-center hover:bg-red-900">
+                Next
+            </button>
+            <button id="next2" class="w-16 hidden border border-black rounded-md h-auto absolute bottom-5 left-5 bg-red-700 font-bold justify-items-center hover:bg-red-900">
+                Next
+            </button>
+        </div>
+        <div id="av" class="absolute bottom-6 right-16 transform translate-x-full transition duration-2000 ease-in-out delay-2000 animate-slide-in ">
+            <img src="assets/Soumi.png" alt="" width="400" height="400">
+        </div>
+    </div>
+    <script>
+        const btn1 = document.getElementById("next1")
+        const btn2 = document.getElementById("next2")
+        const enter = document.getElementById("enter")
+        const answer = document.getElementById("answer")
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                
+                document.querySelector(".animate-slide-in").classList.remove("translate-x-full");
+                setTimeout(()=>{
+                    document.getElementById("dialogue1").classList.remove("hidden");
+                },1000)
+                
+            }, 2000); 
+            
+        });
+
+        btn1.addEventListener('click',()=>{
+            document.getElementById("text1").classList.add("hidden");
+            document.getElementById("next1").classList.add("hidden");
+            document.getElementById("text2").classList.remove("hidden");
+            document.getElementById("next2").classList.remove("hidden");
+        })
+
+        btn2.addEventListener('click',()=>{
+            // document.getElementById("dialogue1").classList.add("hidden");
+            // document.getElementById("av").classList.add("hidden");
+            // document.getElementById("chal1").classList.remove("hidden");
+            window.location.href = "soumi.html"
+        })
+    </script>
+</body>
+</html>
